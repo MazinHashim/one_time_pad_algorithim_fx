@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane onMouseDragged="#dragged" onMousePressed="#pressed" prefHeight="380.0" prefWidth="340.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainController">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="340.0" style="-fx-background-color: #3d4954;" styleClass="menuButton" stylesheets="@application.css">
+         <children>
+            <JFXButton fx:id="homeButton" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="8.0" onAction="#menueButtonAction" prefHeight="25.0" prefWidth="36.0" ripplerFill="#38454900" text="X">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="encrpButton" contentDisplay="GRAPHIC_ONLY" layoutX="101.0" layoutY="8.0" onAction="#menueButtonAction" prefHeight="25.0" prefWidth="36.0" ripplerFill="#38454900" text="X">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@encrp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="decrpButton" contentDisplay="GRAPHIC_ONLY" layoutX="194.0" layoutY="8.0" onAction="#menueButtonAction" prefHeight="25.0" prefWidth="36.0" ripplerFill="#38454900" text="X">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@decrp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="logout" contentDisplay="GRAPHIC_ONLY" layoutX="282.0" layoutY="8.0" onAction="#menueButtonAction" prefHeight="25.0" prefWidth="36.0" ripplerFill="#38454900" text="X">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@shuttdown.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="decrpAnc" layoutY="66.0" prefHeight="320.0" prefWidth="340.0" style="-fx-background-color: #3d4954;" visible="false">
+         <children>
+            <JFXTextField fx:id="decKey" editable="false" focusColor="#eda678" labelFloat="true" layoutX="33.0" layoutY="21.0" prefHeight="29.0" prefWidth="217.0" promptText="Generated Decryption Key" style="-fx-prompt-text-fill: white; -fx-text-fill: #eda678;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="decArea" editable="false" focusColor="#eda678" layoutX="33.0" layoutY="88.0" prefHeight="135.0" prefWidth="275.0" promptText="The contents of the file will display here !" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton layoutX="33.0" layoutY="260.0" onAction="#decryptionAction" prefHeight="33.0" prefWidth="275.0" ripplerFill="#ffa871" style="-fx-background-color: #eda678;" text="Select file to Decrypt" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="encrpAnc" layoutY="66.0" prefHeight="320.0" prefWidth="340.0" style="-fx-background-color: #3d4954;" visible="false">
+         <children>
+            <JFXTextField fx:id="encKey" editable="false" focusColor="#eda678" labelFloat="true" layoutX="33.0" layoutY="22.0" prefHeight="29.0" prefWidth="217.0" promptText="Generated Encryption Key" style="-fx-prompt-text-fill: white; -fx-text-fill: #eda678;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="encArea" editable="false" focusColor="#eda678" layoutX="33.0" layoutY="88.0" prefHeight="135.0" prefWidth="275.0" promptText="The contents of the file will display here !" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton layoutX="33.0" layoutY="260.0" onAction="#encryptionAction" prefHeight="33.0" prefWidth="275.0" ripplerFill="#ffa871" style="-fx-background-color: #eda678;" text="Select file to Encrypt" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane fx:id="logoutAnc" layoutY="66.0" prefHeight="320.0" prefWidth="340.0" style="-fx-background-color: #3d4954;" visible="false">
+         <children>
+            <Text fill="#ffdcdc" layoutX="62.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="thank for you">
+               <font>
+                  <Font name="Bodoni MT Condensed" size="57.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="143.0" layoutY="123.0">
+               <image>
+                  <Image url="@smile.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="43.0" layoutY="249.0" onAction="#shuttdownProg" prefHeight="25.0" prefWidth="256.0" ripplerFill="#ffa871" style="-fx-background-color: #eda678;" text="Shuttdown" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="homeAnc" layoutY="66.0" prefHeight="320.0" prefWidth="340.0" style="-fx-background-color: #3d4954;" visible="false">
+         <children>
+            <ImageView layoutX="120.0" layoutY="60.0">
+               <image>
+                  <Image url="@secure.png" />
+               </image>
+            </ImageView>
+            <Text fill="#ffdcdc" layoutX="27.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="One-Time Pad Algorithm">
+               <font>
+                  <Font name="Californian FB Italic" size="29.0" />
+               </font>
+            </Text>
+            <ImageView layoutX="289.0" layoutY="197.0">
+               <image>
+                  <Image url="@key.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
